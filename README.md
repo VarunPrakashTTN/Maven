@@ -2,11 +2,13 @@
 
 ##### Compile:
 This is the default scope when no other scope is provided.Dependencies with this scope are available on the classpath of the project in all build tasks. They are also propagated to the dependent projects. More importantly, these dependencies are also transitive:
-"""<dependency>
+```
+<dependency>
     <groupId>commons-lang</groupId>
     <artifactId>commons-lang</artifactId>
     <version>2.6</version>
-</dependency>"""
+</dependency>
+```
 
 ##### Runtime:
 The dependencies with this scope are required at runtime. But we don't need them for compilation of the project code. Because of that, dependencies marked with the runtime scope will be present in the runtime and test classpath, but they will be missing from the compile classpath.
